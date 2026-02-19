@@ -197,11 +197,11 @@ def main():#Lo que acontece en la escena principal
     #****************************************************************
 #     SEPARACIÓN CODIGO 3D Y 2D
     #****************************************************************
-    screen = turtle.Screen()#Características de la tortuga del regalo
+    screen = turtle.Screen()#Características de la pantalla
     screen.tracer(0)
-   
     screen.bgcolor("black")
-    t = turtle.Turtle()
+    
+    t = turtle.Turtle()#Características de la tortuga del regalo
     t.speed(0)
     t.color("green")#Cubo verde
     points = [#Definición de todos los puntos del cubo
@@ -282,6 +282,7 @@ if __name__ == "__main__":
    
 
     main()
+
 
 
 
