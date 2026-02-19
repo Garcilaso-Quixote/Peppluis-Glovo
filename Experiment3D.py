@@ -63,7 +63,6 @@ def B(j,k):
     t4.pendown()
     t4.goto(j+20,k-5)#exterior
     t4.goto(j+20,k+20)
-    t4.goto(j+20,k+20)
     t4.goto(j+10,k+25)
     t4.goto(j+20,k+30)
     t4.goto(j+20,k+40)
@@ -283,6 +282,7 @@ if __name__ == "__main__":
    
 
     main()
+
 
 
 
