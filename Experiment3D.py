@@ -15,10 +15,18 @@ t2 = turtle.Turtle()#Tortugas y sus diferentes comandos aparte de la pantalla y 
 t2.hideturtle()
 t3 = turtle.Turtle()
 t5 = turtle.Turtle()
+fw = t3.forward
+ra = t3.right
+la = t3.left
+t4 = turtle.Turtle()
+fw = t4.forward
+ra = t4.right
+la = t4.left
 t4.screen.screensize(800,600)
 t4.color("blue")
 t4.shape("turtle")
 t4.screen.bgcolor("black")
+
 
 
 def A(j,k):
@@ -278,4 +286,5 @@ if __name__ == "__main__":
    
 
     main()
+
 
