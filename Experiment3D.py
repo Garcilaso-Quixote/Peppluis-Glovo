@@ -110,7 +110,7 @@ def Glovo(x,y):
         t3.pendown()
         goto(j+(h/2),k+(b/2))#DerArb
         goto(j,k-(b/2))#CentAbj
-        goto(j-(h/2),k+(b/2))#IzqArb
+      u  goto(j-(h/2),k+(b/2))#IzqArb
         goto(j,k-(b/2))#CentAbj
         t3.penup()
     goto(x-15,y)
@@ -277,4 +277,5 @@ if __name__ == "__main__":
    
 
     main()
+
 
