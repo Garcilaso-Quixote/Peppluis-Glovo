@@ -25,7 +25,7 @@ def A(j,k):
     t4.pendown()
     t4.goto(j+10,k+40)
     t4.goto(j+20,k+20)
-#     Sección patil
+#     Sección de las patas
     t4.goto(j+20,k-5)
     t4.goto(j+10,k-5)
     t4.goto(j+10,k+10)
@@ -47,6 +47,7 @@ def A(j,k):
     t4.goto(j+10,k+20)
     t4.goto(j-10,k+20)
     t4.goto(j,k+30)
+    
 def B(j,k):
     t4.hideturtle()
     t4.penup()
@@ -276,3 +277,4 @@ if __name__ == "__main__":
    
 
     main()
+
