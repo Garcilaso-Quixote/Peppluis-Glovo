@@ -1,7 +1,8 @@
-import turtle
+import turtle#Fase de importación
 import math
 import time
-t2 = turtle.Turtle()
+
+t2 = turtle.Turtle()#Tortugas y sus diferentes comandos aparte de la pantalla y sus requeridas características
 t2.hideturtle()
 t3 = turtle.Turtle()
 fw = t3.forward
@@ -15,6 +16,8 @@ t4.screen.screensize(800,600)
 t4.color("blue")
 t4.shape("turtle")
 t4.screen.bgcolor("black")
+
+
 def A(j,k):
     t4.hideturtle()
     t4.penup()
@@ -71,13 +74,13 @@ def B(j,k):
     t4.goto(j,k+5)
     t4.goto(j+15,k+17.5)
     t4.goto(j,k+20)
-def Sobre(h,b,j,k):
+def Sobre(h,b,j,k):#Función sobre
     t4.penup()
     goto = t4.goto
     goto(j,k)
     goto(j,k-(h/2))
     t4.pendown()
-    goto(j-(b/2),k-(h/2))
+    goto(j-(b/2),k-(h/2))#Coordenadas para el sobre
     goto(j-(b/2),k+(h/2))
     goto(j,k-(h/2))
     goto(j+(b/2),k-(h/2))
@@ -86,7 +89,7 @@ def Sobre(h,b,j,k):
     goto(j+(b/2),k+(h/2))
     goto(j-(b/2),k+(h/2))
     t4.penup()
-color = ["cyan","green","red","yellow","purple","blue","orange","dark green","pink"]
+color = ["cyan","green","red","yellow","purple","blue","orange","dark green","pink"]#Lista con los colores para los diferenters fors y decoraciones
 def Confetti (DistanciaCentro,AlturaCentro,color):
     t3.penup()
     j = DistanciaCentro
@@ -271,4 +274,5 @@ def main():
 
 if __name__ == "__main__":
    
+
     main()
