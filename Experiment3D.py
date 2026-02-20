@@ -1,7 +1,7 @@
-#      +--------+     _____                            _    ___ _         _ 
+#      +--------+     _____                            _    ___ _         _
 #     /        /|    |   __|___ ___ ___ ___ ___    ___| |  |  _|_|___ ___| |
 #    /        / |    |   __|_ -| . | -_|  _| .'|  | .'| |  |  _| |   | .'| |
-#   +--------+  |    |_____|___|  _|___|_| |__,|  |__,|_|  |_| |_|_|_|__,|_|                                                     
+#   +--------+  |    |_____|___|  _|___|_| |__,|  |__,|_|  |_| |_|_|_|__,|_|                                                    
 #   |        |  |              |_|                                          
 #   |        |  +   APP i TCC
 #   |        | /
@@ -55,7 +55,7 @@ def A(j,k):
     t4.goto(j+10,k+20)
     t4.goto(j-10,k+20)
     t4.goto(j,k+30)
-    
+   
 def B(j,k):
     t4.hideturtle()#Letra B con sistema de coordenadas
     t4.penup()
@@ -82,6 +82,96 @@ def B(j,k):
     t4.goto(j,k+5)
     t4.goto(j+15,k+17.5)
     t4.goto(j,k+20)
+   
+def U(j,k):
+    t4.penup()
+    t4.goto(j,k-5)
+    t4.pendown()
+    t4.goto(j,k+40)
+    t4.goto(j-10,k+40)
+    t4.goto(j-10,k+15)
+    t4.goto(j-20,k+15)
+    t4.goto(j-20,k+40)
+    t4.goto(j-30,k+40)
+    t4.goto(j-30,k-5)
+    t4.goto(j,k-5)
+
+def O(j,k):
+    t4.hideturtle()
+    t4.penup()
+    t4.goto(j,k-5)
+    t4.pendown()
+    t4.goto(j+20,k+10)
+    t4.goto(j+20,k+25)
+    t4.goto(j,k+40)
+    t4.goto(j-20,k+25)
+    t4.goto(j-20,k+10)
+    t4.goto(j,k-5)
+    #Dentro
+    t4.penup()
+    t4.goto(j,k+5)
+    t4.pendown()
+    t4.goto(j+15,k+15)
+    t4.goto(j+15,k+20)
+    t4.goto(j,k+30)
+   
+    t4.goto(j-15,k+20)
+    t4.goto(j-15,k+15)
+    t4.goto(j,k+5)
+
+def Y(j,k):
+    t4.hideturtle()
+    t4.penup()
+    t4.goto(j,k-5)
+    t4.pendown()
+    t4.goto(j+5,k-5)
+    t4.goto(j+5,k+20)
+    t4.goto(j+25,k+40)
+    t4.goto(j+20,k+40)
+    t4.goto(j,k+20)
+    t4.goto(j-25,k+40)
+    t4.goto(j-30,k+40)    
+    t4.goto(j-5,k+20)
+    t4.goto(j-5,k-5)
+    t4.goto(j,k-5)
+
+def T(j,k):
+   t4.penup()
+   t4.hideturtle()
+   t4.goto(j,k-5)
+   t4.pendown()
+   t4.goto(j+5,k-5)
+   t4.goto(j-5,k-5)
+   t4.goto(j+5,k-5)
+   t4.goto(j+5,k+30)
+   t4.goto(j+25,k+30)
+   t4.goto(j+25,k+40)
+   t4.goto(j,k+40)
+   t4.goto(j-25,k+40)
+   t4.goto(j-25,k+30)
+   t4.goto(j-5,k+30)
+   t4.goto(j-5,k-5)
+
+def mas(j,k):
+   t4.penup()
+   t4.hideturtle()
+   t4.goto(j,k+10)
+   t4.pendown()
+   t4.goto(j+5,k+10)
+   t4.goto(j-5,k+10)
+   t4.goto(j+5,k+10)
+   t4.goto(j+5,k+20)
+   t4.goto(j+15,k+20)
+   t4.goto(j+15,k+30)
+   t4.goto(j+5,k+30)
+   t4.goto(j+5,k+40)
+   t4.goto(j-5,k+40)
+   t4.goto(j-5,k+30)
+   t4.goto(j-15,k+30)
+   t4.goto(j-15,k+20)
+   t4.goto(j-5,k+20)
+   t4.goto(j-5,k+10)
+
 def Sobre(h,b,j,k):#Función sobre
     t4.penup()
     goto = t4.goto
@@ -111,7 +201,7 @@ def Confetti (DistanciaCentro,AlturaCentro,color):
         t3.goto(j-10,k-30-i*10)
         t3.goto(j+10,k-40-i*10)
         ra(.24)
-def Glovo(x,y):
+def Globo(x,y):
     t5.penup()#Lo hago prácticamente desaparecer
     t5.hideturtle
     goto = t5.goto
@@ -179,28 +269,35 @@ def draw_frame(t, points, edges):#Funcion para el dibujo del cubo/regalo
     turtle.update()
 
 def main():#Lo que acontece en la escena principal
-    A(0,35)
-    B(35,35)
+    A(-120,35)
+    U(-65,35)
+    B(-50,35)
+    A(-5,35)
+    Y(45,35)
+    T(100,35)
+    O(145,35)
+    mas(185,25)
+   
     for i in range (8):#Loop para la decoración repetida
         for x in range (2):
             Confetti(-240+i*70*x,300,color[i])#Usando los dos loops puedo usar la función que cree varias veces en diferentes posiciones y multiplicandolo obtengo un "offset"
             Confetti(-250+i*60*x,390,color[i])#Después la linea  de color es para que la lista sea recorrida  y en los dos siguientes cambia un poco al empezar el color
-            Confetti(-230+i*45*2*x,350,color[i+1])
-            Confetti(-250+3*55*2*x,400,color[i+1])
-        Sobre(25,50,-250+i*100,-100)#Sobre con color alternante (siguiente linea de codigo) que cambia de posición según el loop
+            Confetti(-260+i*45*2*x,350,color[i+1])
+            Confetti(-280+3*55*2*x,400,color[i+1])
+        Sobre(25,50,-360+i*100,-100)#Sobre con color alternante (siguiente linea de codigo) que cambia de posición según el loop
         t4.color(color[i])
     for i in range(8):
         t5.color(color[i])
-        Glovo(-80+i*40,-200)
+        Globo(-120+i*40,-200)
     Tarta(0,-120)#La tarta
-        
+       
     #****************************************************************
 #     SEPARACIÓN CODIGO 3D Y 2D
     #****************************************************************
     screen = turtle.Screen()#Características de la pantalla
     screen.tracer(0)
     screen.bgcolor("black")
-    
+   
     t = turtle.Turtle()#Características de la tortuga del regalo
     t.speed(0)
     t.color("green")#Cubo verde
@@ -282,9 +379,3 @@ if __name__ == "__main__":
    
 
     main()
-
-
-
-
-
-
